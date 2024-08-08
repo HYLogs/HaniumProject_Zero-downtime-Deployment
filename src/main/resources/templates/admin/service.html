@@ -1,0 +1,52 @@
+<html th:replace="~{contentBase :: flexiblelayout(~{::contentBody}, ~{::title})}" xmlns:th="http://www.thymeleaf.org">
+
+
+<title class="bg-light">
+    Services deployed By <span th:text="${member.getName()}"></span>
+</title>
+
+<contentBody class="container-fluid">
+    <div class="border border-dark rounded">
+        <table class="table table-striped text-center align-middle mb-0 table-bordered">
+            <thead class="table-dark">
+                <tr class="text-center">
+                    <th scope="col">
+                        <input class="form-check-input" type="checkbox" value="" id="header-checkbox">
+                    </th>
+                    <th scope="col">서비스 명</th>
+                    <th scope="col">상태</th>
+                    <th scope="col">버전</th>
+                    <th scope="col">Git Hub 주소</th>
+                    <th scope="col">개방 포트</th>
+                    <th scope="col">최종 수정일</th>
+                    <th scope="col">control</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="text-center" th:each="service : ${services}">
+                    <th scope="row">
+                        <input class="form-check-input" type="checkbox" value="">
+                    </th>
+                    <td th:text="${service.name}">서비스명</td>
+    <!--                    <td th:each="${service.state}">상태</td>-->
+                    <td>상태</td>
+                    <td th:text="${service.version}">버전</td>
+                    <td th:text="${service.githubUrl}">github주소</td>
+                    <td th:text="${service.serviceEnvs}">개방 포트</td>
+                    <td>수정일</td>
+    <!--                    <td th:each="${service.latestDate}">최종 수정일</td>-->
+                    <td>
+                        <div class="d-flex flex-row mb-3 justify-content-center">
+                            <a class="mx-1" href="#">
+                                <img src="/images/info.png" alt="">
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="d-flex justify-content-end">
+        <button type="submit" class="btn btn-primary d-flex justify-content-end">Delete</button>
+    </div>
+</contentBody>

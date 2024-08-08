@@ -1,0 +1,17 @@
+*{
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.spliter {
+    font-weight: bold;
+}
+
+.icon {
+    width: 30px;
+    height: 27px;
+}
+
+/*#content-header {*/
+/*    border-bottom-color: #53AA9A;*/
+/*    background-color: rgb(248, 249, 255);*/
+/*}*/
