@@ -4,8 +4,9 @@
 https://github.com/user-attachments/assets/50658090-af8b-4099-b61f-ceced665621d
 
 ### 개발 환경
-`JAVA` == 17
+`JAVA` == 17   
 `Spring Boot` == 3.0.8
+`DataBase` == MySQL
 
 ## 서비스 흐름도
 <img width="499" alt="서비스 흐름도" src="https://github.com/user-attachments/assets/2b0b6a2b-80c9-4e24-a00f-099c5183c6b0">
